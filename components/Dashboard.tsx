@@ -141,7 +141,7 @@ export function Dashboard({ children }: DashboardProps) {
               nodes[i].children = []
             }
             // 现在可以安全地使用children
-            nodes[i].children.push(newFolder)
+            nodes[i].children!.push(newFolder)
             return true
           }
           // 修复类型错误：使用非空断言操作符
@@ -190,7 +190,7 @@ export function Dashboard({ children }: DashboardProps) {
               nodes[i].children = []
             }
             // 现在可以安全地使用children
-            nodes[i].children.push(newFile)
+            nodes[i].children!.push(newFile)
             return true
           }
           // 修复类型错误：使用非空断言操作符
